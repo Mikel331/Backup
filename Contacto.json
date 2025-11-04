@@ -1,0 +1,140 @@
+{
+  "contactos": [
+    {
+      "nombre": "Ana Rodriguez user",
+      "telefono": "\u0027+34 911 22 33 44",
+      "email": "ana.rodriguez@TechSolutions.com"
+    },
+    {
+      "nombre": "Ana Rodríguez",
+      "telefono": "911 223 344",
+      "email": "ana.rodriguez@TechSolutions.com"
+    },
+    {
+      "nombre": "Carlos Núñez",
+      "telefono": "678 445 221",
+      "email": "carlos@TechSolutions.com"
+    },
+    {
+      "nombre": "CompHardware",
+      "telefono": "\u0027+34 933 22 15 59",
+      "email": "compras@comphardware.com"
+    },
+    {
+      "nombre": "ES Company",
+      "telefono": "\u0027+34 612 34 56 78",
+      "email": "info@company.esexample.com"
+    },
+    {
+      "nombre": "Elena Ortega",
+      "telefono": "644 556 778",
+      "email": "elena.ortega@TechSolutions.com"
+    },
+    {
+      "nombre": "Elena Ortega user",
+      "telefono": "\u0027+34 644 55 67 78",
+      "email": "elena.ortega@TechSolutions.com"
+    },
+    {
+      "nombre": "Javier Morales",
+      "telefono": "699 123 778",
+      "email": "javier@gmail.com"
+    },
+    {
+      "nombre": "Jorge Hernandez",
+      "telefono": "",
+      "email": "Jorge@TechSolutions.com"
+    },
+    {
+      "nombre": "Laura Martinez",
+      "telefono": "612 345 678",
+      "email": "laura.martinez@TechSolutions.com"
+    },
+    {
+      "nombre": "Laura Martinez user",
+      "telefono": "\u0027+34 612 34 56 78",
+      "email": "laura.martinez@TechSolutions.com"
+    },
+    {
+      "nombre": "Manuel Vazquez",
+      "telefono": "",
+      "email": "manuelvazquez@TechSolutions.com"
+    },
+    {
+      "nombre": "María López",
+      "telefono": "611 982 334",
+      "email": "maria@gmail.com"
+    },
+    {
+      "nombre": "Miguel Gomez user",
+      "telefono": "\u0027+34 678 90 12 34",
+      "email": "Miguel.Gomez@TechSolutions.com"
+    },
+    {
+      "nombre": "Miguel Gómez",
+      "telefono": "678 901 234",
+      "email": "Miguel.Gomez@TechSolutions.com"
+    },
+    {
+      "nombre": "My Company (Chicago)",
+      "telefono": "\u0027+1 312 349 3030",
+      "email": "chicago@yourcompany.com"
+    },
+    {
+      "nombre": "Pablo Sanchez user",
+      "telefono": "\u0027+34 699 11 22 33",
+      "email": "pablo.sanchez@TechSolutions.com"
+    },
+    {
+      "nombre": "Pablo Sánchez",
+      "telefono": "699 112 233",
+      "email": "pablo.sanchez@TechSolutions.com"
+    },
+    {
+      "nombre": "Paco Cortes",
+      "telefono": "",
+      "email": "paco@TechSolutions.com"
+    },
+    {
+      "nombre": "ServiciosInstal",
+      "telefono": "911 445 882",
+      "email": "info@servinstal.com"
+    },
+    {
+      "nombre": "SoftDistrib",
+      "telefono": "\u0027+34 954 77 89 90",
+      "email": "ventas@softdistrib.com"
+    },
+    {
+      "nombre": "Tech Solutions, Mitchell Admin",
+      "telefono": "943 36 46 00",
+      "email": "admin@yourcompany.example.com"
+    },
+    {
+      "nombre": "TechSolutions S.L",
+      "telefono": "",
+      "email": ""
+    },
+    {
+      "nombre": "YourCompany, Joel Willis",
+      "telefono": "(683)-556-5104",
+      "email": "joel.willis63@example.com"
+    },
+    {
+      "nombre": "kjdwindiw",
+      "telefono": "wkdnkowmdowm",
+      "email": "oiwjdowd"
+    },
+    {
+      "nombre": "wwfwfwf",
+      "telefono": "wwfwf",
+      "email": "wfwefwf"
+    }
+  ],
+  "contacto_incibe": {
+    "organizacion": "INCIBE - Instituto Nacional de Ciberseguridad",
+    "telefono": "017",
+    "web": "https://www.incibe.es",
+    "email": "info@incibe.es"
+  }
+}

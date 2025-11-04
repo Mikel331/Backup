@@ -19,7 +19,7 @@ public class Backup2{
             System.out.printf("%02X\n", i);  // se imprime en hexadecimales
             fos.write(i); // escribe el byte en la copia
         }
-        fos.close(); 
+        fos.close();  // cierra el fichero de copia
         }catch(FileNotFoundException e){ // excepción si el archivo no existe
             e.printStackTrace();
         }catch(IOException e){ // excepción de lectura y escritura

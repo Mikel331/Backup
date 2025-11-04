@@ -14,48 +14,54 @@ import org.xml.sax.SAXException;
 public class Backup4Lectura {
     public static void main(String[] args) {
         try {
-            File fichero = new File("contacto.xml");
-            DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
-            DocumentBuilder db = dbf.newDocumentBuilder();
-            Document d = db.parse(fichero);
+            File fichero = new File("contacto.xml"); // fichero que se va a leer
+            DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance(); // creamos una instancia en el DocumentBuilderFactory
+            DocumentBuilder db = dbf.newDocumentBuilder(); // y la enlazamos con el DocumentBuilder
+            Document d = db.parse(fichero); // creamos el documento
 
+            // muestra el nombre del elemento raíz del xml
             System.out.println(d.getDocumentElement().getNodeName());
 
+            // obtenemos una lista de todos los nodos del contacto
             NodeList nl = d.getElementsByTagName("contacto");
 
+            // recorremos los elementos contacto con un bucle for
             for (int i = 0; i < nl.getLength(); i++) {
-                Node n = nl.item(i);
-                System.out.println(n.getNodeName());
+                Node n = nl.item(i); // obtenemos el nodo actual
+                System.out.println(n.getNodeName()); // se imprime el nombre
 
+                // si el nodo es un elemento creamos un elemento
                 if (n.getNodeType() == Node.ELEMENT_NODE) {
                     Element e = (Element) n;
 
-                    NodeList nombreLista = e.getElementsByTagName("nombre");
-                    if (nombreLista.getLength() > 0) {
-                        Element nombre = (Element) nombreLista.item(0);
-                        System.out.println("Nombre: " + nombre.getTextContent());
-                        System.out.println("ID: " + nombre.getAttribute("id"));
+                    // lectura del nombre
+                    NodeList nombreLista = e.getElementsByTagName("nombre"); 
+                    if (nombreLista.getLength() > 0) { // si el nombre existe:
+                        Element nombre = (Element) nombreLista.item(0); // enlazamos el elemento nombre con el NodeList
+                        System.out.println("Nombre: " + nombre.getTextContent()); // mostramos el texto del nombre
+                        System.out.println("ID: " + nombre.getAttribute("id"));   // y el atributo ID 
                     }
 
+                    // lectura del correo
                     NodeList correoLista = e.getElementsByTagName("correo");
-                    if (correoLista.getLength() > 0) {
-                        Element correo = (Element) correoLista.item(0);
-                        System.out.println("Correo: " + correo.getTextContent());
+                    if (correoLista.getLength() > 0) { // si el correo existe:
+                        Element correo = (Element) correoLista.item(0); // enlazamos el elemento correo con el NodeList
+                        System.out.println("Correo: " + correo.getTextContent()); // mostramos el texto del correo
                     }
 
-                    NodeList telefonoLista = e.getElementsByTagName("telefono");
-                    if (telefonoLista.getLength() > 0) {
-                        Element telefono = (Element) telefonoLista.item(0);
-                        System.out.println("Teléfono: " + telefono.getTextContent());
+                    // lectura del telefono
+                    NodeList telefonoLista = e.getElementsByTagName("telefono"); 
+                    if (telefonoLista.getLength() > 0) { // si el telefono existe: 
+                        Element telefono = (Element) telefonoLista.item(0); // enlazamos el elemento telefono con el NodeList
+                        System.out.println("Teléfono: " + telefono.getTextContent()); // mostramos el texto del telefono
                     }
                 }
             }
-
-        } catch (ParserConfigurationException e) {
+        } catch (ParserConfigurationException e) { // excepción para el parseo
             e.printStackTrace();
-        } catch (SAXException e) {
+        } catch (SAXException e) { // excepción para errores SAX
             e.printStackTrace();
-        } catch (IOException e) {
+        } catch (IOException e) { // excepción de lectura y escritura
             e.printStackTrace();
         }
     }

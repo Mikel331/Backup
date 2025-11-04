@@ -15,16 +15,18 @@ import org.xml.sax.SAXException;
 public class Backup5ConsultaTelefonoAna {
     public static void main(String[] args) {
         try {
-            DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
-            DocumentBuilder db = dbf.newDocumentBuilder();
-            Document d = db.parse("contacto.xml");
-            XPath xpath = XPathFactory.newInstance().newXPath();
-            String expresion = "//contacto[nombre='Ana Rodríguez']/telefono/text()";
-
+            DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance(); // creamos una instancia del DocumentBuilderFactory
+            DocumentBuilder db = dbf.newDocumentBuilder(); // y la enlazamos con el DocumentBuilder
+            Document d = db.parse("contacto.xml"); // parseamos el fichero xml en el documento
+            XPath xpath = XPathFactory.newInstance().newXPath(); // creamos la instancia de XPath
+            String expresion = "//contacto[nombre='Ana Rodríguez']/telefono/text()"; // expresion para coger el telefono del contacto Ana
+            // ejecutamos la consulta
             NodeList telefono = (NodeList) xpath.evaluate(expresion, d, XPathConstants.NODESET);
+            // recorremos el NodeList del telefono
             for (int i = 0; i < telefono.getLength(); i++) {
-                System.out.println(telefono.item(i).getNodeValue());
+                System.out.println(telefono.item(i).getNodeValue()); // cogemos el valor deseado
             }
+        // excepciones para los diferentes errores que nos pueden salir
         } catch (ParserConfigurationException | SAXException | IOException e) {
             e.printStackTrace();
         } catch (XPathExpressionException e) {

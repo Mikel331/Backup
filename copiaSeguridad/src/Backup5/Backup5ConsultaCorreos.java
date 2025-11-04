@@ -15,17 +15,20 @@ import org.xml.sax.SAXException;
 public class Backup5ConsultaCorreos {
     public static void main(String[] args) {
         try{
-            DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
-            DocumentBuilder db = dbf.newDocumentBuilder();
-            Document d = db.parse("contacto.xml");
-            XPath xpath = XPathFactory.newInstance().newXPath();
-            String expresion = "//contacto/correo/text()";
+            DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance(); // creamos una instancia del DocumentBuilderFactory
+            DocumentBuilder db = dbf.newDocumentBuilder(); // y la enlazamos con el DocumentBuilder
+            Document d = db.parse("contacto.xml"); // parseamos el fichero xml en el documento
+            XPath xpath = XPathFactory.newInstance().newXPath(); // creamos la instancia de XPath
+            String expresion = "//contacto/correo/text()"; // expresión para coger el texto del correo
 
+            // ejecutamos la consulta
             NodeList correos = (NodeList) xpath.evaluate(expresion, d, XPathConstants.NODESET);
+            // recorremos la NodeList de correos con un bucle for
             for(int i = 0; i < correos.getLength(); i++){
-                System.out.println(correos.item(i).getNodeValue());
+                System.out.println(correos.item(i).getNodeValue()); // y conseguimos el valor
             }
-        }catch (ParserConfigurationException | SAXException | IOException e) {
+        // excepciones para los diferentes errores que nos pueden salir
+        }catch (ParserConfigurationException | SAXException | IOException e) { 
             e.printStackTrace();
         } catch (XPathExpressionException e) {
             e.printStackTrace();
