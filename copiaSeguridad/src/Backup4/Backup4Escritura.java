@@ -10,7 +10,6 @@ import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
-import org.w3c.dom.Attr;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
@@ -69,7 +68,7 @@ public class Backup4Escritura{
             Transformer t = tf.newTransformer(); // crea el dom en un archivo xml
 
             DOMSource source = new DOMSource(d); // se crea la fuente de datos
-            File fichero = new File("contacto.xml"); // el fichero en el cual se escribiran los datos
+            File fichero = new File("C:\\Users\\ikamindeguia24\\Desktop\\backup-reto\\Backup\\Backup\\copiaSeguridad\\src\\Backup4\\contacto.xml"); // el fichero en el cual se escribiran los datos
             StreamResult result = new StreamResult(fichero); // el resultado se escribe en el fichero "contacto.xml"
             t.transform(source, result); // y transforma el resultado
 

@@ -14,7 +14,7 @@ import org.xml.sax.SAXException;
 public class Backup4Lectura {
     public static void main(String[] args) {
         try {
-            File fichero = new File("contacto.xml"); // fichero que se va a leer
+            File fichero = new File("C:\\Users\\ikamindeguia24\\Desktop\\backup-reto\\Backup\\Backup\\copiaSeguridad\\src\\Backup4\\contacto.xml"); // fichero que se va a leer
             DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance(); // creamos una instancia en el DocumentBuilderFactory
             DocumentBuilder db = dbf.newDocumentBuilder(); // y la enlazamos con el DocumentBuilder
             Document d = db.parse(fichero); // creamos el documento

@@ -3,14 +3,14 @@ package Backup2;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.io.FileOutputStream;
+import java.io.IOException;
 
 public class Backup2{
     public static void main(String[] args){
         FileInputStream fis = null; // declaramos el FileInputStream 
         try{
-        File fichero = new File("presupuesto.pdf"); // fichero del cual cogemos los datos
+        File fichero = new File("C:\\Users\\ikamindeguia24\\Desktop\\backup-reto\\Backup\\Backup\\copiaSeguridad\\src\\presupuesto.pdf"); // fichero del cual cogemos los datos
         fis = new FileInputStream(fichero);
         int i;
         FileOutputStream fos = new FileOutputStream("copia_presupuesto.pdf"); // fichero donde se guardara la copia
